@@ -1,0 +1,31 @@
+<environment xmlns:p="urn:schemas-env-com:info">
+
+  <t1 type="mysql">
+    <host>127.0.0.1</host>
+    <port>3306</port>
+    <username>root</username>
+    <password>123456</password>
+  </t1>
+
+  <t1 type="redis">
+    <host>127.0.0.1</host>
+    <port>3306</port>
+    <username>root</username>
+    <password>123456</password>
+  </t1>
+
+  <t1 type="ssh">
+    <host>127.0.0.1</host>
+    <port>3306</port>
+    <username>root</username>
+    <password>123456</password>
+  </t1>
+
+  <t1 type="ftp">
+    <host>127.0.0.1</host>
+    <port>3306</port>
+    <username>root</username>
+    <password>123456</password>
+  </t1>
+  
+</environment>
