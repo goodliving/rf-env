@@ -1,31 +1,55 @@
 <environment xmlns:p="urn:schemas-env-com:info">
-
-  <t1 type="mysql">
-    <host>127.0.0.1</host>
-    <port>3306</port>
-    <username>root</username>
-    <password>123456</password>
+  <t1>
+    <mysql>
+      <host>172.17.0.32</host>
+      <port>3306</port>
+      <username>test_ljd</username>
+      <password>test_ljd1</password>
+    </mysql>
+    <redis>
+      <host>172.17.0.32</host>
+      <port>6379</port>
+      <username></username>
+      <password>sider</password>
+    </redis>
+    <ssh>
+      <host>172.17.0.31</host>
+      <port>22</port>
+      <username>moon</username>
+      <password>moon</password>
+    </ssh>
+    <ftp>
+      <host>172.16.0.142</host>
+      <port>21</port>
+      <username>test_download</username>
+      <password>test_download</password>
+    </ftp>
   </t1>
 
-  <t1 type="redis">
-    <host>127.0.0.1</host>
-    <port>3306</port>
-    <username>root</username>
-    <password>123456</password>
-  </t1>
-
-  <t1 type="ssh">
-    <host>127.0.0.1</host>
-    <port>3306</port>
-    <username>root</username>
-    <password>123456</password>
-  </t1>
-
-  <t1 type="ftp">
-    <host>127.0.0.1</host>
-    <port>3306</port>
-    <username>root</username>
-    <password>123456</password>
-  </t1>
-  
+  <t2>
+    <mysql>
+      <host>172.16.0.142</host>
+      <port>3307</port>
+      <username>test_ljd</username>
+      <password>test_ljd1</password>
+    </mysql>
+    <redis>
+      <host>172.16.0.142</host>
+      <port>6379</port>
+      <username></username>
+      <password>sider</password>
+    </redis>
+    <ssh>
+      <host>172.16.0.143</host>
+      <port>22</port>
+      <username>moon</username>
+      <password>moon</password>
+    </ssh>
+    <ftp>
+      <host>172.16.0.142</host>
+      <port>21</port>
+      <username>test_download</username>
+      <password>test_download</password>
+    </ftp>
+  </t2>
 </environment>
