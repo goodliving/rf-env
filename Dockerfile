@@ -1,11 +1,11 @@
 FROM golang:alpine as builder
 
-RUN mkdir /opt/app
-WORKDIR /opt/app
+RUN mkdir $GOPATH/goodliving/rf-env -p && mkdir /opt/app -p
+WORKDIR $GOPATH/goodliving/rf-env
 
 COPY . .
 
-RUN go build 
+RUN go build && cp rf-env /opt/app/rf-env && cp env_info.xml /opt/app/env_info.xml
 
 FROM alpine 
 
