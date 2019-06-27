@@ -30,12 +30,10 @@ func ReadSource(env string) (map[string]interface{}, error) {
 	env_info := make(map[string]interface{})
 	
 	for _, info := range root.SelectElements(env) {
-		arr := [4]string{"mysql", "redis", "ssh", "ftp"}
-		for _, value := range arr {
-			env_info[value] = readTypeValue(info, value)
+		for _, c := range info.ChildElements() {
+			env_info[c.Tag] = readTypeValue(info, c.Tag)
 		}
 	}
-	
 	return env_info, err
 }
 
