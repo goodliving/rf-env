@@ -7,6 +7,7 @@ import (
 	"path/filepath"
 	"fmt"
 	"github.com/beevik/etree"
+	"goodliving/rf-env/pkg/setting"
 )
 
 func ReadSource(env string) (map[string]interface{}, error) {
@@ -15,9 +16,7 @@ func ReadSource(env string) (map[string]interface{}, error) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	
-	src := "env_info.xml"
-	abspath := filepath.Join(pwd, src)
+	abspath := filepath.Join(pwd, setting.EnvFileName)
 	
 	doc := etree.NewDocument()
 	if err := doc.ReadFromFile(abspath); err != nil {
@@ -45,7 +44,6 @@ func readTypeValue(info *etree.Element, choose_type string) (map[string]interfac
 	for _, e := range info.FindElements(type_choice) {
 		result[e.Tag] = e.Text()
 	}
-
 	return result
 }
 

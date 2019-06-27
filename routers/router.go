@@ -5,7 +5,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"goodliving/rf-env/routers/api/v1"
 	"goodliving/rf-env/pkg/setting"
-
 )
 
 func InitRouter() *gin.Engine {

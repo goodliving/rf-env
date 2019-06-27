@@ -14,6 +14,7 @@ var (
     WriteTimeout time.Duration
     PageSize int
     JwtSecret string
+    EnvFileName string
 )
 
 func init() {
@@ -28,6 +29,7 @@ func init() {
 }
 func LoadBase() {
     RunMode = Cfg.Section("").Key("RUN_MODE").MustString("debug")
+    EnvFileName = Cfg.Section("").Key("ENV_FILE_NAME").MustString("xml")
 }
 func LoadServer() {
     sec, err := Cfg.GetSection("server")
